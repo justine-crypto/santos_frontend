@@ -1,54 +1,54 @@
-// Login.jsx
-import React, { useState } from "react";
-import "./Login.css";
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import './Login.css';
 
 const Login = () => {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
+  const navigate = useNavigate(); 
 
-  const handleSubmit = (e) => {
+  const handleLogin = (e) => {
     e.preventDefault();
-    console.log("Email:", email);
-    console.log("Password:", password);
+    if (username && password) {
+      navigate('/dashboard'); 
+    } else {
+      alert("Palihog butangi og username ug password");
+    }
   };
 
   return (
-    <div className="login-page">
-      <div className="login-container">
-        <h1 className="main-heading">
-          Decide faster so you can do more
-        </h1>
-        <p className="sub-text">
-          Join our community and manage your workflow efficiently.
-        </p>
-
-        <form className="login-form" onSubmit={handleSubmit}>
-          <h2>Log in</h2>
-
-          <label>Email</label>
-          <input
-            type="email"
-            placeholder="name@company.com"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            required
-          />
-
-          <label>Password</label>
-          <input
-            type="password"
-            placeholder="6+ characters"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            required
-          />
-
-          <button type="submit">Login</button>
+    <div className="login-container">
+      <div className="login-box">
+        {/* Usbon nato ang text para "Log in" parehas sa picture */}
+        <h2 className="login-title">Log in</h2>
+        
+        <form onSubmit={handleLogin}>
+          <div className="input-group">
+            {/* Gikuha ang icon para mas limpyo tan-awon */}
+            <input 
+              type="text" 
+              placeholder="Email or Username" 
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
+            />
+          </div>
+          
+          <div className="input-group">
+            <input 
+              type="password" 
+              placeholder="Password" 
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+            />
+          </div>
+          
+          <div className="button-group">
+            {/* Himoon natong dako ang Login button */}
+            <button type="submit" className="login-btn">Log in</button>
+          </div>
+          
+          <button type="button" className="forgot-btn">Forgot Password?</button>
         </form>
-
-        <p className="signup-text">
-          Don’t have an account? <span>Sign Up</span>
-        </p>
       </div>
     </div>
   );

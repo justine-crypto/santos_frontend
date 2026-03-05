@@ -9,6 +9,7 @@ function App() {
     <Router>
       <div className="App">
         <Routes>
+          {/* Automatically redirects from base URL to /login */}
           <Route path="/" element={<Navigate to="/login" />} />
           <Route path="/login" element={<Login />} />
           <Route path="/dashboard" element={<Dashboard />} />

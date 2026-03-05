@@ -1,101 +1,74 @@
+/* Login.css */
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Segoe UI", sans-serif;
-  }
-  
-  .login-page {
-    height: 100vh;
-    width: 100%;
-    background: linear-gradient(135deg, #1f1f1f, #2b2b2b);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #ffffff;
-  }
-  
-  .login-container {
-    text-align: center;
-    width: 100%;
-    max-width: 500px;
-    padding: 20px;
-  }
-  
-  .main-heading {
-    font-size: 28px;
-    font-weight: 600;
-    margin-bottom: 10px;
-  }
-  
-  .sub-text {
-    color: #cfcfcf;
-    margin-bottom: 40px;
-    font-size: 16px;
-  }
-  
-  .login-form {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-  }
-  
-  .login-form h2 {
-    margin-bottom: 10px;
-    font-weight: 600;
-  }
-  
-  .login-form label {
-    text-align: left;
-    font-size: 14px;
-    color: #dcdcdc;
-  }
-  
-  .login-form input {
-    padding: 12px;
-    border-radius: 6px;
-    border: 1px solid #2d3b55;
-    background-color: #0f1a2b;
-    color: #ffffff;
-    font-size: 14px;
-    outline: none;
-    transition: 0.3s ease;
-  }
-  
-  .login-form input:focus {
-    border-color: #3b82f6;
-    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.3);
-  }
-  
-  .login-form button {
-    margin-top: 15px;
-    padding: 10px;
-    border: none;
-    border-radius: 8px;
-    background-color: #111111;
-    color: #ffffff;
-    font-weight: 600;
-    cursor: pointer;
-    transition: 0.3s ease;
-  }
-  
-  .login-form button:hover {
-    background-color: #186bd8;
-  }
-  
-  .signup-text {
-    margin-top: 20px;
-    font-size: 14px;
-    color: #cfcfcf;
-  }
-  
-  .signup-text span {
-    color: #ffffff;
-    font-weight: 500;
-    cursor: pointer;
-  }
-  
-  .signup-text span:hover {
-    text-decoration: underline;
-  }
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #0d0121; /* Ngitngit kaayo nga purple background */
+  width: 100vw;
+}
+
+.login-box {
+  background-color: #1a013a; /* Deep purple box */
+  padding: 40px;
+  width: 350px;
+  border-radius: 25px; /* Linginon ang corners */
+  text-align: center;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+
+.login-title {
+  color: white;
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+
+.input-group {
+  margin-bottom: 20px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 15px;
+  border-radius: 10px;
+  border: none;
+  background-color: #000000; /* Light grey inputs parehas sa picture */
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+.button-group {
+  margin-top: 30px;
+}
+
+.login-btn {
+  width: 100%;
+  padding: 15px;
+  border-radius: 10px;
+  border: none;
+  background-color: #4b2c85; /* Purple button */
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.login-btn:hover {
+  background-color: #5f39a7;
+}
+
+.forgot-btn {
+  background: none;
+  border: none;
+  color: #a0a0a0;
+  margin-top: 20px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.forgot-btn:hover {
+  color: white;
+}
